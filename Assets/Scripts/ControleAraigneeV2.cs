@@ -5,12 +5,12 @@ using UnityEngine.InputSystem;
 
 public class ControleAraigneeV2 : MonoBehaviour
 {
-    // variables de mouvement et contrôle
+    // variables de mouvement et contrï¿½le
     [SerializeField] private float _vitessePromenade;
     private Rigidbody _rb;
     private Vector3 directionInput;
 
-    // variables de contrôle d'animation
+    // variables de contrï¿½le d'animation
     private Animator _animator;
     private float _rotationVelocity;
 
@@ -18,6 +18,7 @@ public class ControleAraigneeV2 : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
+        _vitesseDouble = *2
     }
 
     void OnPromener(InputValue directionBase)
