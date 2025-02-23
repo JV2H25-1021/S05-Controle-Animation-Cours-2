@@ -18,14 +18,13 @@ public class ControleAraigneeV2 : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
-        _vitesseDouble = *2
+
     }
 
     void OnPromener(InputValue directionBase)
     {
         Vector2 directionAvecVitesse = directionBase.Get<Vector2>() * _vitessePromenade;
         directionInput = new Vector3(directionAvecVitesse.x, 0f, directionAvecVitesse.y);
-        _animator.SetFloat("Deplacement", directionInput.magnitude);
     }
 
     void FixedUpdate()
